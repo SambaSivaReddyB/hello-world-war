@@ -7,6 +7,18 @@
 	<packaging>war</packaging>
 	<name>!!!!Hello World Web Application Repository!!!!</name>
 	<description>Simplest possible Java Webapp</description>
+	    <distributionManagement>
+        <repository>
+            <id>123</id>
+            <name>Internal Releases</name>
+            <url>http://54.146.187.126:8081/repository/sample-nexus/</url>
+        </repository>
+        <snapshotRepository>
+            <id>deployment</id>
+            <name>Internal Snapshot Releases</name>
+            <url>http://54.146.187.126:8081/repository/sample-nexus/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 	<build>
 		<plugins>
