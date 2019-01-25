@@ -11,20 +11,17 @@
 		You are coming from 
 		<%= request.getRemoteAddr()  %></p>
 	<p> 
-            <%
-            String hostname, serverAddress;
-            hostname = "error";
-            serverAddress = "error";
-            try {
-                InetAddress inetAddress;
-                inetAddress = InetAddress.getLocalHost();
-                hostname = inetAddress.getHostName();
-                serverAddress = inetAddress.toString();
-            } catch (UnknownHostException e) {
+		<h3> Server Side IP Address </h3><br>
+		<%@page import="java.net.InetAddress;" %>
+		<%String ip = "";
+			InetAddress inetAddress = InetAddress.getLocalHost();
+			ip = inetAddress.getHostAddress();
+			out.println("Server Host Name :: "+inetAddress.getHostName());%><br>
+			<%out.println("Server IP Address :: "+ip);%>
 
-                e.printStackTrace();
-            }
-            %>
-            <li>InetAddress: <%=serverAddress %>
-		<li>InetAddress.hostname: <%=hostname %></p>
+			<h3> Client Side IP Address </h3><br>
+			<%out.print( "Client IP Address :: " + request.getRemoteAddr() ); %><br>
+			<%out.print( "Client Name Host :: "+ request.getRemoteHost() );%><br></p>
+		
+
 </body>
