@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Hello SambaSiva!</title>
+<title>Hello Siva Siva!</title>
 </head>
 <body>
 	<h1 style="color: green; font-size: 50px;" align="center">###Welcome to MPIT cloud ### </h1>
