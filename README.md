@@ -70,3 +70,12 @@ D) send files or execute commands over SSH
 
 10. Access web application from browser which is running on container
 <docker_host_Public_IP>:8090/hello-world-war-2.0.0
+
+
+Jenkins configuration samples
+==============================
+![](https://github.com/SambaSivaReddyB/hello-world-war/blob/master/images/1.JPG)
+
+![](https://github.com/SambaSivaReddyB/hello-world-war/blob/master/images/2.JPG)
+
+![](https://github.com/SambaSivaReddyB/hello-world-war/blob/master/images/3.JPG)
