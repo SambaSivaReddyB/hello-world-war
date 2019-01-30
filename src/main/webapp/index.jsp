@@ -9,7 +9,7 @@
 		It is NOW
 		<%= new java.util.Date() %></p>
 	<p>
-		You are coming from IP:
+		You are coming from IP
 		<%= request.getRemoteAddr()  %></p>
 	
 </body>
