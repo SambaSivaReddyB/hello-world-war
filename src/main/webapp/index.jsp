@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>!!!Hello Tomcat!!!!</title>
+<title>!!!Hello deploment by usin Ansible to Tomcat!!!!</title>
 </head>
 <body>
 	<h1 style="color: green; font-size: 75px;" align="center"> *** Welcome to MPIT cloud Devops Training *** </h1>
