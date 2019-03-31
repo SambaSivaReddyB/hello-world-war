@@ -9,7 +9,7 @@ pipeline {
         git credentialsId: 'github', url: 'https://github.com/SambaSivaReddyB/JavasampleRepo.git'
       }
 	}
-    stage('SonarQube Analysis') {
+    stage('SonarQube Analysis1') {
       //def mvnHome =  usr name: 'maven-3', type: 'maven'
 	  steps {
         withSonarQubeEnv('SonarQube') { 
