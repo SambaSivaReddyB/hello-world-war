@@ -1,0 +1,31 @@
+pipeline {
+  agent any
+
+  tools {nodejs "node"}
+
+  stages {
+    stage('Checkout') {
+      steps {
+        git credentialsId: 'github', url: 'https://github.com/SambaSivaReddyB/JavasampleRepo.git'
+      }
+	}
+    stage('SonarQube Analysis') {
+      //def mvnHome =  usr name: 'maven-3', type: 'maven'
+	  steps {
+        withSonarQubeEnv('SonarQube') { 
+          sh "/usr/bin/mvn sonar:sonar"
+        }
+      }
+    }
+   stage('Slack Notification'){
+       steps{
+           slackSend baseUrl: 'https://hooks.slack.com/services/',
+           channel: 'mradarbuilds', 
+           color: 'good', 
+           message: "SonarQube Analysis( http://54.159.126.128:9000/dashboard?id=com.kdp.java%3AJava-Projects ) for the Job -  ${env.JOB_NAME} is completed successfully and Build no - ${env.BUILD_ID}", 
+           teamDomain: 'mpinfotech', 
+           tokenCredentialId: 'tokenforjenkins'
+        }
+   }	
+  }
+}
